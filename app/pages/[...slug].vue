@@ -1,5 +1,5 @@
 <template>
-  <UContainer>
+  <UContainer class="mt-8 pb-24 space-y-12">
     <ContentRenderer v-if="page" :value="page" />
   </UContainer>
 </template>

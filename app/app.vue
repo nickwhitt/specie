@@ -32,7 +32,7 @@
       </UContainer>
     </header>
 
-    <main>
+    <main class="min-h-[calc(100vh-var(--ui-header-height))]">
       <NuxtPage />
     </main>
 
