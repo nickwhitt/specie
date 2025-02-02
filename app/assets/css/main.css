@@ -3,4 +3,5 @@
 
 @theme {
   --font-sans: 'Public Sans', sans-serif;
+  --ui-header-height:calc(var(--spacing)*16)
 }

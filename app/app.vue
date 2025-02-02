@@ -3,9 +3,9 @@
 
   <UApp>
     <header class="bg-[var(--ui-bg)]/75 backdrop-blur border-b border-[var(--ui-border)] sticky top-0 z-50">
-      <UContainer class="flex items-center justify-between gap-3 h-[var(--ui-header-height)]">
+      <UContainer class="flex items-center justify-between gap-3 h-16">
         <div id="left" class="lg:flex-1 flex items-center gap-1.5">
-          <USlideover title="Specie" side="left" class="lg:hidden" v-model:open="open">
+          <USlideover title="Specie" side="left" class="lg:hidden" v-model:open="open" :ui="{ content: 'max-w-sm' }">
             <UButton icon="i-lucide-menu" color="neutral" variant="ghost" />
             <template #body>
               <UNavigationMenu :items="items" variant="link" highlight orientation="vertical" />
