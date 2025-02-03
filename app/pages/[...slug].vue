@@ -1,7 +1,7 @@
 <template>
-  <UContainer class="mt-8 pb-24 space-y-12">
+  <div class="my-8">
     <ContentRenderer v-if="page" :value="page" />
-  </UContainer>
+  </div>
 </template>
 
 <script lang="ts" setup>
