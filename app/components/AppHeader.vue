@@ -5,7 +5,7 @@
         <USlideover title="Specie" side="left" class="lg:hidden" v-model:open="open" :ui="{ content: 'max-w-sm' }">
           <UButton icon="i-lucide-menu" color="neutral" variant="link" />
           <template #body>
-            <UNavigationMenu :items="items" variant="link" highlight orientation="vertical" />
+            <UNavigationMenu :items="items" highlight orientation="vertical" />
           </template>
         </USlideover>
         <div class="hidden lg:flex shrink-0 flex items-end gap-1.5">
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div>
-        <UNavigationMenu :items="items" variant="link" highlight class="hidden lg:block" />
+        <UNavigationMenu :items="items" highlight class="hidden lg:block" />
         <div class="lg:hidden shrink-0 flex items-end gap-1.5">
           <UButton icon="i-heroicons-circle-stack-solid" variant="link" size="xl" to="/">
             <span class="text-[var(--ui-text)]">Specie</span>
@@ -43,14 +43,20 @@ const isDark = computed({
   }
 })
 
-const { data } = await useAsyncData(
-  'navigation',
-  () => queryCollectionNavigation('content').where('path', '<>', '/')
-)
-
-const items = computed(
-  () => data.value?.map(page => ({ label: page.title, to: page.path }))
-)
+const items = [
+  {
+    label: 'Federal Coinage',
+    to: '/federal',
+    defaultOpen: true,
+    children: [
+      { label: 'Half Cents', to: '/federal/half-cents', description: '1793-1857' },
+      { label: 'Cents', to: '/federal/cents', description: '1793-date' }
+    ],
+  },
+  { label: 'Commemoratives', to: '/commemoratives' },
+  { label: 'Sets', to: '/sets' },
+  { label: 'Bullion', to: '/bullion' },
+]
 
 const open = ref(false)
 watch(() => route.fullPath, () => {
