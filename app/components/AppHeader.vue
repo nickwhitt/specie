@@ -50,7 +50,8 @@ const items = [
     defaultOpen: true,
     children: [
       { label: 'Half Cents', to: '/federal/half-cents', description: '1793-1857' },
-      { label: 'Cents', to: '/federal/cents', description: '1793-date' }
+      { label: 'Cents', to: '/federal/cents', description: '1793-date' },
+      { label: 'Half Dollars', to: '/federal/half-dollars', description: '1794-date' }
     ],
   },
   { label: 'Commemoratives', to: '/commemoratives' },
