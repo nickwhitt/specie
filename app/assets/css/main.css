@@ -2,6 +2,6 @@
 @import "@nuxt/ui";
 
 @theme {
-  --font-sans: 'Public Sans', sans-serif;
+  --font-sans: Inter, 'Public Sans', sans-serif;
   --ui-header-height:calc(var(--spacing)*16)
 }

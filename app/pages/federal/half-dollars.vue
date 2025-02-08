@@ -8,14 +8,13 @@
 
 <script setup lang="ts">
 const types = ref([
-  { type: 'Flowing Hair', dates: '1794-1795', designers: ['Robert Scot'] },
-  { type: 'Draped Bust', dates: '1796-1807', designers: ['Robert Scot'] },
-  { type: 'Capped Bust', dates: '1807-1839', designers: ['John Reich', 'Christian Gobrecht'] },
-  { type: 'Liberty Seated', dates: '1839-1891', designers: ['Christian Gobrecht', 'James B. Longacre'] },
-  { type: 'Barber', dates: '1892-1915', designers: ['Charles E. Barber'] },
-  { type: 'Liberty Walking', dates: '1916-1947', designers: ['Adolph A. Weinman'], owned: true },
-  { type: 'Franklin', dates: '1948-1963', designers: ['John R. Sinnock'], owned: true },
-  { type: 'Kennedy', dates: '1964-date', designers: ['Gilroy Roberts', 'Frank Gasparro'], owned: true },
-  { type: 'Kennedy', subtype: 'Bicentennial', dates: '1976', designers: ['Gilroy Roberts', 'Seth Huntington'], owned: true },
+  { type: 'Flowing Hair', dates: '1794-1795', designers: ['Robert Scot'], image: 'half-dollars/flowing-hair-obv.png' },
+  { type: 'Draped Bust', dates: '1796-1807', designers: ['Robert Scot'], image: 'half-dollars/draped-bust-obv.png' },
+  { type: 'Capped Bust', dates: '1807-1839', designers: ['John Reich', 'Christian Gobrecht'], image: 'half-dollars/capped-bust-obv.png' },
+  { type: 'Liberty Seated', dates: '1839-1891', designers: ['Christian Gobrecht', 'James B. Longacre'], image: 'half-dollars/liberty-seated-obv.png' },
+  { type: 'Barber', dates: '1892-1915', designers: ['Charles E. Barber'], image: 'half-dollars/barber-obv.png' },
+  { type: 'Liberty Walking', dates: '1916-1947', designers: ['Adolph A. Weinman'], image: 'half-dollars/liberty-walking-obv.png', owned: true },
+  { type: 'Franklin', dates: '1948-1963', designers: ['John R. Sinnock'], image: 'half-dollars/franklin-obv.png', owned: true },
+  { type: 'Kennedy', dates: '1964-date', designers: ['Gilroy Roberts', 'Frank Gasparro', 'Seth Huntington'], image: 'half-dollars/kennedy-obv.png', owned: true },
 ])
 </script>
