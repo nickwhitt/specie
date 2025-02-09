@@ -20,6 +20,19 @@
     </ProseP>
     <TypeList :types="smallCents" />
 
+
+    <ProseH2 id="flowing-hair">Flowing Hair</ProseH2>
+    <ProseH3>Chain Reverse</ProseH3>
+    <ProseH3>Wreath Reverse</ProseH3>
+
+    <ProseH2 id="liberty-cap">Liberty Cap</ProseH2>
+
+    <ProseH2 id="draped-bust">Draped Bust</ProseH2>
+
+    <ProseH2 id="classic-head">Classic Head</ProseH2>
+
+    <ProseH2 id="liberty-head">Liberty Head</ProseH2>
+
     <!-- <UTable :data="rows" :columns="columns" :loading="status === 'pending'" />
     <div class="flex justify-center lg:justify-end pt-4">
       <UPagination v-model:page="page" :items-per-page="pageCount" :total="data?.length" />
@@ -33,11 +46,11 @@ import type { Coin } from '~~/server/api/cents';
 import formatNumber from '~~/utils/formatNumber';
 
 const largeCents = ref([
-  { type: 'Flowing Hair', dates: '1793', designers: ['Henry Voigt'], image: '/cents/flowing-hair-obv.png' },
-  { type: 'Liberty Cap', dates: '1794-1796', designers: ['Henry Voigt'], image: 'cents/liberty-cap-obv.png' },
-  { type: 'Draped Bust', dates: '1796-1807', designers: ['Robert Scot'], image: 'cents/draped-bust-obv.png' },
-  { type: 'Classic Head', dates: '1808-1814', designers: ['John Reich'], image: 'cents/classic-head-obv.png' },
-  { type: 'Liberty Head', dates: '1816-1857', designers: ['Robert Scot', 'John Reich', 'Christian Gobrecht'], image: 'cents/liberty-head-braided-hair.png' },
+  { type: 'Flowing Hair', slug: 'flowing-hair', dates: '1793', designers: ['Henry Voigt'], image: '/cents/flowing-hair-obv.png' },
+  { type: 'Liberty Cap', slug: 'liberty-cap', dates: '1793-1796', designers: ['Henry Voigt'], image: 'cents/liberty-cap-obv.png' },
+  { type: 'Draped Bust', slug: 'draped-bust', dates: '1796-1807', designers: ['Robert Scot'], image: 'cents/draped-bust-obv.png' },
+  { type: 'Classic Head', slug: 'classic-head', dates: '1808-1814', designers: ['John Reich'], image: 'cents/classic-head-obv.png' },
+  { type: 'Liberty Head', slug: 'liberty-head', dates: '1816-1857', designers: ['Robert Scot', 'John Reich', 'Christian Gobrecht'], image: 'cents/liberty-head-braided-hair.png' },
 ])
 
 const smallCents = ref([

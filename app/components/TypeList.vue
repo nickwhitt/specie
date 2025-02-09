@@ -1,7 +1,8 @@
 <template>
   <UCard :ui="{ body: 'p-0 sm:p-0' }">
     <ul class="divide-y divide-(--ui-border)">
-      <li v-for="type in types" class="flex gap-x-6 py-2 items-center justify-between">
+      <li v-for="type in types"
+        class="relative hover:bg-(--ui-bg-muted) flex gap-x-6 py-2 items-center justify-between">
         <div class="flex gap-x-4 items-center">
           <div class="relative flex items-center max-h-16 lg:max-h-20 overflow-hidden">
             <NuxtImg v-if="type.image" :src="type.image" sizes="92px lg:120px" class="-ms-3" />
@@ -14,7 +15,10 @@
           </div>
           <div>
             <p class="font-bold lg:text-lg">
-              {{ type.type }}<span v-if="type.subtype">, {{ type.subtype }}</span>
+              <NuxtLink :to="type.slug ? `#${type.slug}` : ''">
+                <span class="absolute inset-x-0 -top-px bottom-0" />
+                {{ type.type }}
+              </NuxtLink>
             </p>
             <p class="text-sm">{{ type.dates }}</p>
           </div>
@@ -36,7 +40,7 @@
 interface CoinType {
   type: string
   image?: string
-  subtype?: string
+  slug?: string
   dates: string
   designers: string[]
   owned?: Boolean
