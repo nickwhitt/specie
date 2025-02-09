@@ -1,10 +1,10 @@
 <template>
-  <div class="max-w-3xl">
+  <UCard :ui="{ body: 'p-0 sm:p-0' }">
     <ul class="divide-y divide-(--ui-border)">
       <li v-for="type in types" class="flex gap-x-6 py-2 items-center justify-between">
         <div class="flex gap-x-4 items-center">
-          <div class="relative flex items-center max-h-16 overflow-hidden">
-            <NuxtImg v-if="type.image" :src="type.image" sizes="92px" class="-ms-3" />
+          <div class="relative flex items-center max-h-16 lg:max-h-20 overflow-hidden">
+            <NuxtImg v-if="type.image" :src="type.image" sizes="92px lg:120px" class="-ms-3" />
             <UAvatar v-else :alt="type.type" size="3xl" />
             <span v-if="type.owned" :class="[
               'absolute right-0 top-0 size-2 rounded-full ring ring-(--ui-bg) bg-(--ui-success)',
@@ -13,7 +13,7 @@
             </span>
           </div>
           <div>
-            <p class="font-bold">
+            <p class="font-bold lg:text-lg">
               {{ type.type }}<span v-if="type.subtype">, {{ type.subtype }}</span>
             </p>
             <p class="text-sm">{{ type.dates }}</p>
@@ -29,7 +29,7 @@
         </div>
       </li>
     </ul>
-  </div>
+  </UCard>
 </template>
 
 <script setup lang="ts">

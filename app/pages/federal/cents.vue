@@ -1,6 +1,6 @@
 <template>
   <article class="my-8">
-    <ProseH2>Cent Overview</ProseH2>
+    <ProseH2>Large Cents</ProseH2>
     <ProseP>
       The first circulation coin to be struck by the United States Mint, the cent has been in
       continual production since its authorization by the Coinage Act of 1792. Copper was
@@ -8,6 +8,9 @@
       account. As such, the net difference between the cost of production and the face value
       produced was sole profit of the Mint.
     </ProseP>
+    <TypeList :types="largeCents" />
+
+    <ProseH2>Small Cents</ProseH2>
     <ProseP>
       As the price of copper began to rise dramatically in the 1850s, the Mint sought to preserve
       its profit by reducing both the size and composition of the cent. The Mint Act of 1857
@@ -15,22 +18,8 @@
       of the new small cents. The Act coincidentally boosted American numismatic interest as the
       public sought to collect and preserve the large cents that still circulated.
     </ProseP>
+    <TypeList :types="smallCents" />
 
-    <ProseH2>Cent Types</ProseH2>
-
-    <UCard :ui="{ body: 'p-0 sm:p-0', root: 'my-5' }">
-      <template #header>
-        <p class="text-xl text-(--ui-text-highlighted) font-bold">Large Cents</p>
-      </template>
-      <TypeList :types="largeCents" />
-    </UCard>
-
-    <UCard :ui="{ body: 'p-0 sm:p-0', root: 'my-5' }">
-      <template #header>
-        <p class="text-xl text-(--ui-text-highlighted) font-bold">Small Cents</p>
-      </template>
-      <TypeList :types="smallCents" />
-    </UCard>
     <!-- <UTable :data="rows" :columns="columns" :loading="status === 'pending'" />
     <div class="flex justify-center lg:justify-end pt-4">
       <UPagination v-model:page="page" :items-per-page="pageCount" :total="data?.length" />
@@ -52,9 +41,9 @@ const largeCents = ref([
 ])
 
 const smallCents = ref([
-  { type: 'Flying Eagle', dates: '1856-1858', designers: ['James B. Longacre'] },
-  { type: 'Indian Head', dates: '1859-1909', designers: ['James B. Longacre'] },
-  { type: 'Lincoln', dates: '1909-date', designers: ['Victor D. Brenner', 'Frank Gasparro', 'Lyndall Bass'], owned: true },
+  { type: 'Flying Eagle', dates: '1856-1858', designers: ['James B. Longacre'], image: '/cents/flying-eagle-obv.png' },
+  { type: 'Indian Head', dates: '1859-1909', designers: ['James B. Longacre'], image: 'cents/indian-head-obv.png' },
+  { type: 'Lincoln', dates: '1909-date', designers: ['Victor D. Brenner', 'Frank Gasparro', 'Lyndall Bass'], image: '/cents/lincoln-obv.png', owned: true },
 ])
 
 const { data, status } = await useFetch('/api/cents')
