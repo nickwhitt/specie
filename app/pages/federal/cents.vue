@@ -20,10 +20,41 @@
     </ProseP>
     <TypeList :types="smallCents" />
 
+    <ProseH2 id="flowing-hair">Flowing Hair (1793)</ProseH2>
 
-    <ProseH2 id="flowing-hair">Flowing Hair</ProseH2>
-    <ProseH3>Chain Reverse</ProseH3>
-    <ProseH3>Wreath Reverse</ProseH3>
+    <ProseH3>Chain Reverse (1793)</ProseH3>
+    <div class="flex flex-wrap gap-2">
+      <UBadge variant="soft" icon="i-lucide-drafting-compass">Henry Voigt</UBadge>
+      <UBadge variant="soft" icon="i-lucide-atom">Copper</UBadge>
+      <UBadge variant="soft" icon="i-lucide-weight">13.48 grams</UBadge>
+      <UBadge variant="soft" icon="i-lucide-ruler">26 to 28 mm</UBadge>
+    </div>
+    <div class="grid md:grid-cols-2 md:gap-4">
+      <ProseP>
+        The reverse features a chain of 15 links representing the United States surrounding the
+        legend ONE CENT above the fraction 1/100. The first of several varieties, Sheldon-1,
+        has an abreviated legend UNITED STATES OF AMERI. outside the links; later versions have
+        the full AMERICA.
+      </ProseP>
+      <UTable class="h-fit" :data="[{ issue: '1793, Chain Reverse', mintage: 36103 }]" />
+    </div>
+
+    <ProseH3>Wreath Reverse (1793)</ProseH3>
+    <div class="flex flex-wrap gap-2">
+      <UBadge variant="soft" icon="i-lucide-drafting-compass">Henry Voigt</UBadge>
+      <UBadge variant="soft" icon="i-lucide-atom">Copper</UBadge>
+      <UBadge variant="soft" icon="i-lucide-weight">13.48 grams</UBadge>
+      <UBadge variant="soft" icon="i-lucide-ruler">26 to 28 mm</UBadge>
+    </div>
+    <div class="grid md:grid-cols-2 md:gap-4">
+      <ProseP>
+        A modified design featuring a high-relief portrait of Liberty on the obverse, and a laurel
+        wreath replacing the chains on the reverse. The fraction 1/100 was moved outside and below
+        the wreath, and the legend UNITED STATES OF AMERICA was proportionally centered around a
+        beaded border.
+      </ProseP>
+      <UTable class="h-fit" :data="[{ issue: '1793, Wreath Reverse', mintage: 63353 }]" />
+    </div>
 
     <ProseH2 id="liberty-cap">Liberty Cap</ProseH2>
 
@@ -41,6 +72,7 @@
 </template>
 
 <script setup lang="ts">
+import { USeparator } from '#components';
 import type { TableColumn } from '@nuxt/ui'
 import type { Coin } from '~~/server/api/cents';
 import formatNumber from '~~/utils/formatNumber';
