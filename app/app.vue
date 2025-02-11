@@ -5,7 +5,7 @@
     <AppHeader />
 
     <UContainer class="max-w-5xl">
-      <main>
+      <main class="my-8">
         <NuxtPage />
       </main>
 

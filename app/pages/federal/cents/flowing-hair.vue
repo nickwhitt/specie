@@ -1,0 +1,38 @@
+<template>
+  <article>
+    <UBreadcrumb :items="[
+      { label: 'Federal Types', to: '/federal' },
+      { label: 'Cents', to: '/federal/cents' },
+      { label: 'Flowing Hair Cents' }
+    ]" />
+
+    <ProseP>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat at natus deleniti illo ratione. Praesentium
+      minima quia voluptate, modi accusantium vitae sit recusandae placeat fugit in pariatur. Tenetur, suscipit laborum!
+    </ProseP>
+
+    <TypeDetail title="Chain Reverse (1793)" :images="[
+      '/cents/flowing-hair-chain-obv.webp',
+      '/cents/flowing-hair-chain-rev.webp',
+    ]">
+      <ProseP>
+        The reverse features a chain of 15 links representing the United States surrounding the
+        legend ONE CENT above the fraction 1/100. The first of several varieties, Sheldon-1,
+        has an abreviated legend UNITED STATES OF AMERI. outside the links; later versions have
+        the full AMERICA.
+      </ProseP>
+    </TypeDetail>
+
+    <TypeDetail title="Wreath Reverse (1793)" :images="[
+      '/cents/flowing-hair-wreath-obv.webp',
+      '/cents/flowing-hair-wreath-rev.webp',
+    ]">
+      <ProseP>
+        A modified design featuring a high-relief portrait of Liberty on the obverse, and a laurel
+        wreath replacing the chains on the reverse. The fraction 1/100 was moved outside and below
+        the wreath, and the legend UNITED STATES OF AMERICA was proportionally centered around a
+        beaded border.
+      </ProseP>
+    </TypeDetail>
+  </article>
+</template>

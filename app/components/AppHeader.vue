@@ -45,7 +45,7 @@ const isDark = computed({
 
 const items = [
   {
-    label: 'Federal Coinage',
+    label: 'Federal Types',
     to: '/federal',
     defaultOpen: true,
     children: [

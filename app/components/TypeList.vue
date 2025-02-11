@@ -15,7 +15,7 @@
           </div>
           <div>
             <p class="font-bold lg:text-lg">
-              <NuxtLink :to="type.slug ? `#${type.slug}` : ''">
+              <NuxtLink :to="type.slug ? type.slug : ''">
                 <span class="absolute inset-x-0 -top-px bottom-0" />
                 {{ type.type }}
               </NuxtLink>

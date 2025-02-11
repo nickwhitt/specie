@@ -1,7 +1,7 @@
 <template>
-  <div class="my-8">
+  <article>
     <ContentRenderer v-if="page" :value="page" />
-  </div>
+  </article>
 </template>
 
 <script lang="ts" setup>
