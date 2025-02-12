@@ -1,6 +1,7 @@
 <template>
   <article>
-    <ProseH2>Large Cents</ProseH2>
+    <ProseH1>Cents</ProseH1>
+    <ProseH2 id="large-cents">Large Cents</ProseH2>
     <ProseP>
       The first circulation coin to be struck by the United States Mint, the cent has been in
       continual production since its authorization by the Coinage Act of 1792. Copper was
@@ -10,7 +11,7 @@
     </ProseP>
     <TypeList :types="largeCents" />
 
-    <ProseH2>Small Cents</ProseH2>
+    <ProseH2 id="small-cents">Small Cents</ProseH2>
     <ProseP>
       As the price of copper began to rise dramatically in the 1850s, the Mint sought to preserve
       its profit by reducing both the size and composition of the cent. The Mint Act of 1857

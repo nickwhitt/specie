@@ -6,12 +6,9 @@
       { label: 'Flowing Hair Cents' }
     ]" />
 
-    <ProseP>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat at natus deleniti illo ratione. Praesentium
-      minima quia voluptate, modi accusantium vitae sit recusandae placeat fugit in pariatur. Tenetur, suscipit laborum!
-    </ProseP>
+    <ProseH1>Flowing Hair Cents</ProseH1>
 
-    <TypeDetail title="Chain Reverse (1793)" :images="[
+    <TypeDetail title="Chain Reverse (1793)" slug="chain" :images="[
       '/cents/flowing-hair-chain-obv.webp',
       '/cents/flowing-hair-chain-rev.webp',
     ]">
@@ -23,7 +20,7 @@
       </ProseP>
     </TypeDetail>
 
-    <TypeDetail title="Wreath Reverse (1793)" :images="[
+    <TypeDetail title="Wreath Reverse (1793)" slug="wreath" :images="[
       '/cents/flowing-hair-wreath-obv.webp',
       '/cents/flowing-hair-wreath-rev.webp',
     ]">
