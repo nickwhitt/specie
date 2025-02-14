@@ -18,17 +18,9 @@
         Mint's longest running design. All Wheat cents are struck in bronze except for 1943 issues struck in steel.
       </ProseP>
       <UButtonGroup class="-ms-2.5">
-        <TypeSpecifications title="Wheat Cent Specifications" :data="{
-          designer: 'Victor D. Brenner',
-          weight: '3.11 grams // 1943: 2.70 grams',
-          composition: 'bronze (.950 copper, .050 tin and zinc) // 1943: zinc-coated steel',
-          diameter: '19 mm',
-          edge: 'Plain',
-        }" />
-        <UModal title="Wheat Cent Issues">
-          <UButton variant="link">Issues</UButton>
-          <template #body></template>
-        </UModal>
+        <TypeSpecifications title="Wheat Cent Specifications" :data="wheatSpecs" />
+        <TypeIssues title="Wheat Cent Issues" description="Circulation Strikes" :issues="wheatIssues" />
+        <TypeIssues title="Wheat Cent Issues" description="Proof Strikes" type="Proofs" :issues="wheatProofs" />
       </UButtonGroup>
     </TypeDetail>
 
@@ -39,13 +31,9 @@
         the composition was changed to copper-plated zinc.
       </ProseP>
       <UButtonGroup class="-ms-2.5">
-        <TypeSpecifications title="Memorial Cent Specifications" :data="{
-          designers: 'Victor D. Brenner (obv), Frank Gasparro (rev)',
-          weight: '3.11 grams // 1982-2008: 2.5 grams',
-          composition: 'bronze (.950 copper, .050 tin and zinc) // 1982-2008: copper-plated zinc (core: .992 zinc, .008 copper, with a plating of pure copper; total content .975 zinc, .025 copper)',
-          diameter: '19 mm',
-          edge: 'Plain',
-        }" />
+        <TypeSpecifications title="Memorial Cent Specifications" :data="memorialSpecs" />
+        <TypeIssues title="Memorial Cent Issues" description="Circulation Strikes" :issues="memorialIssues" />
+        <TypeIssues title="Memorial Cent Issues" description="Proof Strikes" type="Proofs" :issues="memorialProofs" />
       </UButtonGroup>
     </TypeDetail>
 
@@ -61,13 +49,10 @@
         Life in Illinois and Presidency in Washington, D.C.
       </ProseP>
       <UButtonGroup class="-ms-2.5">
-        <TypeSpecifications title="Bicentennial Cent Specifications" :data="{
-          designers: 'Victor D. Brenner (obv), various (revs)',
-          weight: '2.5 grams',
-          composition: 'copper-plated zinc (core: .992 zinc, .008 copper, with a plating of pure copper; total content .975 zinc, .025 copper)',
-          diameter: '19 mm',
-          edge: 'Plain',
-        }" />
+        <TypeSpecifications title="Bicentennial Cent Specifications" :data="bicentennialSpecs" />
+        <TypeIssues title="Bicentennial Cent Issues" description="Circulation Strikes" :issues="bicentennialIssues" />
+        <TypeIssues title="Bicentennial Cent Issues" description="Proof Strikes" type="Proofs"
+          :issues="bicentennialProofs" />
       </UButtonGroup>
     </TypeDetail>
 
@@ -80,14 +65,75 @@
         during the Civil War era and the Lincoln presidency as a symbol of unity.
       </ProseP>
       <UButtonGroup class="-ms-2.5">
-        <TypeSpecifications title="Union Cent Specifications" :data="{
-          designers: 'Victor D. Brenner (obv), Lyndall Bass (rev)',
-          weight: '2.5 grams',
-          composition: 'copper-plated zinc (core: .992 zinc, .008 copper, with a plating of pure copper; total content .975 zinc, .025 copper)',
-          diameter: '19 mm',
-          edge: 'Plain',
-        }" />
+        <TypeSpecifications title="Shield Cent Specifications" :data="shieldSpecs" />
+        <TypeIssues title="Shield Cent Issues" description="Circulation Strikes" :issues="shieldIssues" />
+        <TypeIssues title="Shield Cent Issues" description="Proof Strikes" type="Proofs" :issues="shieldProofs" />
       </UButtonGroup>
     </TypeDetail>
   </article>
 </template>
+
+<script setup lang="ts">
+import type { Issue } from '~/components/TypeIssues.vue';
+import type { Specifications } from '~/components/TypeSpecifications.vue';
+
+const wheatSpecs = ref<Specifications>({
+  designer: 'Victor D. Brenner',
+  weight: '3.11 grams // 1943: 2.70 grams',
+  composition: 'bronze (.950 copper, .050 tin and zinc) // 1943: zinc-coated steel',
+  diameter: '19 mm',
+  edge: 'Plain',
+})
+
+const memorialSpecs = ref<Specifications>({
+  designers: 'Victor D. Brenner (obv), Frank Gasparro (rev)',
+  weight: '3.11 grams // 1982-2008: 2.5 grams',
+  composition: 'bronze (.950 copper, .050 tin and zinc) // 1982-2008: copper-plated zinc (core: .992 zinc, .008 copper, with a plating of pure copper; total content .975 zinc, .025 copper)',
+  diameter: '19 mm',
+  edge: 'Plain',
+})
+
+const bicentennialSpecs = ref<Specifications>({
+  designers: 'Victor D. Brenner (obv), various (revs)',
+  weight: '2.5 grams',
+  composition: 'copper-plated zinc (core: .992 zinc, .008 copper, with a plating of pure copper; total content .975 zinc, .025 copper)',
+  diameter: '19 mm',
+  edge: 'Plain',
+})
+
+const shieldSpecs = ref<Specifications>({
+  designers: 'Victor D. Brenner (obv), Lyndall Bass (rev)',
+  weight: '2.5 grams',
+  composition: 'copper-plated zinc (core: .992 zinc, .008 copper, with a plating of pure copper; total content .975 zinc, .025 copper)',
+  diameter: '19 mm',
+  edge: 'Plain',
+})
+
+const wheatIssues = ref<Issue[]>([
+  { issue: '1909, V.D.B.', mintage: 27995000, variants: ['Doubled Die Obv'] },
+  { issue: '1909-S, V.D.B.', mintage: 484000 },
+  { issue: '1909', mintage: 72702618 },
+  { issue: '1909-S', mintage: 1825000, variants: ['S Over Horiz S'] },
+  { issue: '1910', mintage: 146801218 },
+  { issue: '1910-S', mintage: 6045000 },
+  { issue: '1911', mintage: 101177787 },
+  { issue: '1911-D', mintage: 12672000 },
+  { issue: '1911-S', mintage: 4026000 },
+  { issue: '1912', mintage: 68153060 },
+  { issue: '1912-D', mintage: 10411000 },
+  { issue: '1912-S', mintage: 4431000 },
+])
+const wheatProofs = ref<Issue[]>([
+  { issue: '1909, V.D.B', mintage: 600, estimate: true },
+  { issue: '1909', mintage: 2618 },
+  { issue: '1910', mintage: 4118 },
+  { issue: '1911', mintage: 1725 },
+  { issue: '1912', mintage: 2172 },
+])
+const memorialIssues = ref<Issue[]>([])
+const memorialProofs = ref<Issue[]>([])
+const bicentennialIssues = ref<Issue[]>([])
+const bicentennialProofs = ref<Issue[]>([])
+const shieldIssues = ref<Issue[]>([])
+const shieldProofs = ref<Issue[]>([])
+</script>

@@ -18,6 +18,10 @@
         has an abreviated legend UNITED STATES OF AMERI. outside the links; later versions have
         the full AMERICA.
       </ProseP>
+      <UButtonGroup class="-ms-2.5">
+        <TypeSpecifications title="Chain Specifications" :data="chainSpecs" />
+        <TypeIssues title="Chain Issues" description="Circulation Strikes" :issues="chainIssues" />
+      </UButtonGroup>
     </TypeDetail>
 
     <TypeDetail title="Wreath Reverse (1793)" slug="wreath" :images="[
@@ -30,6 +34,39 @@
         the wreath, and the legend UNITED STATES OF AMERICA was proportionally centered around a
         beaded border.
       </ProseP>
+      <UButtonGroup class="-ms-2.5">
+        <TypeSpecifications title="Wreath Specifications" :data="wreathSpecs" />
+        <TypeIssues title="Wreath Issues" description="Circulation Strikes" :issues="wreathIssues" />
+      </UButtonGroup>
     </TypeDetail>
   </article>
 </template>
+
+<script setup lang="ts">
+import type { Issue } from '~/components/TypeIssues.vue';
+import type { Specifications } from '~/components/TypeSpecifications.vue';
+
+const chainIssues = ref<Issue[]>([
+  { issue: '1793', mintage: 36103, variants: ['AMERI.', 'AMERICA, Periods', 'AMERICA, No Periods'] },
+])
+
+const chainSpecs = ref<Specifications>({
+  designer: 'Henry Voigt',
+  weight: '13.48 grams',
+  composition: 'pure copper',
+  diameter: '26 to 27 mm',
+  edge: 'Vine and bars design',
+})
+
+const wreathSpecs = ref<Specifications>({
+  designer: 'Henry Voigt',
+  weight: '13.48 grams',
+  composition: 'pure copper',
+  diameter: '26 to 28 mm',
+  edge: 'Vine and bars design, or lettered ONE HUNDRED FOR A DOLLAR',
+})
+
+const wreathIssues = ref<Issue[]>([
+  { issue: '1793', mintage: 63353, variants: ['Vine/Bars Edge', 'Lettered Edge', 'Strawberry Leaf'] }
+])
+</script>

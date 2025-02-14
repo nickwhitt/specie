@@ -14,16 +14,18 @@
 </template>
 
 <script setup lang="ts">
+export interface Specifications {
+  designer?: string
+  designers?: string
+  weight: string
+  composition: string
+  diameter: string
+  edge?: string
+}
+
 const props = defineProps<{
   title: string,
-  data: {
-    designer?: string,
-    designers?: string,
-    weight: string,
-    composition: string,
-    diameter: string,
-    edge?: string,
-  },
+  data: Specifications,
   notes?: string
 }>()
 </script>
