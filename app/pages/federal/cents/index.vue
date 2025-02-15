@@ -1,73 +1,199 @@
 <template>
   <article>
     <ProseH1>Cents</ProseH1>
-    <ProseH2 id="large-cents">Large Cents</ProseH2>
     <ProseP>
       The first circulation coin to be struck by the United States Mint, the cent has been in
-      continual production since its authorization by the Coinage Act of 1792. Copper was
-      sourced and purchased directly by the Mint, with all coinage being made for its own
-      account. As such, the net difference between the cost of production and the face value
-      produced was sole profit of the Mint.
+      continual production since its authorization by the Coinage Act of 1792.
     </ProseP>
-    <TypeList :types="largeCents" />
 
-    <ProseH2 id="small-cents">Small Cents</ProseH2>
-    <ProseP>
-      As the price of copper began to rise dramatically in the 1850s, the Mint sought to preserve
-      its profit by reducing both the size and composition of the cent. The Mint Act of 1857
-      discontinued production of the large and half cents, and introduced the copper-nickel alloy
-      of the new small cents. The Act coincidentally boosted American numismatic interest as the
-      public sought to collect and preserve the large cents that still circulated.
-    </ProseP>
-    <TypeList :types="smallCents" />
+    <TypeList :types="types" />
 
-    <!-- <UTable :data="rows" :columns="columns" :loading="status === 'pending'" />
-    <div class="flex justify-center lg:justify-end pt-4">
-      <UPagination v-model:page="page" :items-per-page="pageCount" :total="data?.length" />
-    </div> -->
+    <article>
+      <ProseH2 id="flowing-hair">Flowing Hair (1793)</ProseH2>
+
+      <TypeDetail :images="[
+        '/cents/flowing-hair-chain-obv.webp',
+        '/cents/flowing-hair-chain-rev.webp',
+      ]">
+        <template #title>
+          <ProseH3 id="chain">Chain Reverse</ProseH3>
+        </template>
+        <ProseP>
+          The reverse features a chain of 15 links representing the United States surrounding the
+          legend ONE CENT above the fraction 1/100. The first of several varieties, Sheldon-1
+          has an abreviated legend UNITED STATES OF AMERI. outside the links; later versions have
+          the full AMERICA.
+        </ProseP>
+        <UButtonGroup class="-ms-2.5">
+          <TypeSpecifications title="Flowing Hair, Chain Specifications" :data="{
+            designer: 'Henry Voigt',
+            weight: '13.48 grams',
+            composition: 'pure copper',
+            diameter: '26 to 27 mm',
+            edge: 'Vine and bars design',
+          }" />
+          <TypeIssues title="Flowing Hair, Chain Issues" description="Circulation Strikes" :issues="chainIssues" />
+        </UButtonGroup>
+      </TypeDetail>
+
+      <TypeDetail :images="[
+        '/cents/flowing-hair-wreath-obv.webp',
+        '/cents/flowing-hair-wreath-rev.webp',
+      ]">
+        <template #title>
+          <ProseH3 id="wreath">Wreath Reverse</ProseH3>
+        </template>
+        <ProseP>
+          A modified design featuring a high-relief portrait of Liberty on the obverse, and a laurel
+          wreath replacing the chains on the reverse. The fraction 1/100 was moved outside and below
+          the wreath, and the legend UNITED STATES OF AMERICA was proportionally centered around a
+          beaded border.
+        </ProseP>
+        <UButtonGroup class="-ms-2.5">
+          <TypeSpecifications title="Flowing Hair, Wreath Specifications" :data="{
+            designer: 'Henry Voigt',
+            weight: '13.48 grams',
+            composition: 'pure copper',
+            diameter: '26 to 28 mm',
+            edge: 'Vine and bars design, or lettered ONE HUNDRED FOR A DOLLAR',
+          }" />
+          <TypeIssues title="Flowing Hair, Wreath Issues" description="Circulation Strikes" :issues="wreathIssues" />
+        </UButtonGroup>
+      </TypeDetail>
+    </article>
+
+    <article>
+      <ProseH2 id="lincoln">Lincoln Cents (1909-date)</ProseH2>
+
+      <TypeDetail :images="[
+        '/cents/lincoln-wheat-obv.webp',
+        '/cents/lincoln-wheat-rev.webp',
+      ]">
+        <template #title>
+          <ProseH3 id="wheat-ears">Wheat Ears Reverse (1909-1958)</ProseH3>
+        </template>
+        <ProseP>
+          Lincoln Wheat cents designed by Victor D. Brenner debuted in 1909 and were the first circulating U.S. coins to
+          picture an actual person. The Wheat Ears reverse ended in 1958, while the obverse portrait has endured as the
+          Mint's longest running design. All Wheat cents are struck in bronze except for 1943 issues struck in steel.
+        </ProseP>
+        <UButtonGroup class="-ms-2.5">
+          <TypeSpecifications title="Lincoln, Wheat Cent Specifications" :data="{
+            designer: 'Victor D. Brenner',
+            weight: '3.11 grams // 1943: 2.70 grams',
+            composition: 'bronze (.950 copper, .050 tin and zinc) // 1943: zinc-coated steel',
+            diameter: '19 mm',
+            edge: 'Plain',
+          }" />
+          <TypeIssues title="Lincoln, Wheat Cent Issues" description="Circulation Strikes" :issues="wheatIssues" />
+          <TypeIssues title="Lincoln, Wheat Cent Issues" description="Proof Strikes" type="Proofs"
+            :issues="wheatProofs" />
+        </UButtonGroup>
+      </TypeDetail>
+
+      <TypeDetail :images="[]">
+        <template #title>
+          <ProseH3 id="memorial">Memorial Reverse (1959-2008)</ProseH3>
+        </template>
+        <ProseP>
+          In 1959, for the 150th anniversary of Lincoln's birth, the reverse design of the Lincoln cent was changed to
+          depict the Lincoln Memorial in Washington, D.C. Memorial cents were struck in a copper alloy until 1982, when
+          the composition was changed to copper-plated zinc.
+        </ProseP>
+        <UButtonGroup class="-ms-2.5">
+          <TypeSpecifications title="Lincoln, Memorial Cent Specifications" :data="{
+            designers: 'Victor D. Brenner (obv), Frank Gasparro (rev)',
+            weight: '3.11 grams // 1982-2008: 2.5 grams',
+            composition: 'bronze (.950 copper, .050 tin and zinc) // 1982-2008: copper-plated zinc (core: .992 zinc, .008 copper, with a plating of pure copper; total content .975 zinc, .025 copper)',
+            diameter: '19 mm',
+            edge: 'Plain',
+          }" />
+          <TypeIssues title="Lincoln, Memorial Cent Issues" description="Circulation Strikes"
+            :issues="memorialIssues" />
+          <TypeIssues title="Lincoln, Memorial Cent Issues" description="Proof Strikes" type="Proofs"
+            :issues="memorialProofs" />
+        </UButtonGroup>
+      </TypeDetail>
+
+      <TypeDetail :images="[
+        '/cents/lincoln-birth-rev.webp',
+        '/cents/lincoln-youth-rev.webp',
+        '/cents/lincoln-professional-rev.webp',
+        '/cents/lincoln-presidency-rev.webp',
+      ]">
+        <template #title>
+          <ProseH3 id="bicentennial">Bicentennial Reverses (2009)</ProseH3>
+        </template>
+        <ProseP>
+          In 2009, for the 200th anniversary of Lincoln's birth, four one-year-only reverse designs honoring important
+          stages in Abraham Lincoln's life were issued: Birthplace in Kentucky, Formative Years in Indiana, Professional
+          Life in Illinois and Presidency in Washington, D.C.
+        </ProseP>
+        <UButtonGroup class="-ms-2.5">
+          <TypeSpecifications title="Lincoln, Bicentennial Cent Specifications" :data="{
+            designers: 'Victor D. Brenner (obv), various (revs)',
+            weight: '2.5 grams',
+            composition: 'copper-plated zinc (core: .992 zinc, .008 copper, with a plating of pure copper; total content .975 zinc, .025 copper)',
+            diameter: '19 mm',
+            edge: 'Plain',
+          }" />
+          <TypeIssues title="Lincoln, Bicentennial Cent Issues" description="Circulation Strikes"
+            :issues="bicentennialIssues" />
+          <TypeIssues title="Lincoln, Bicentennial Cent Issues" description="Proof Strikes" type="Proofs"
+            :issues="bicentennialProofs" />
+        </UButtonGroup>
+      </TypeDetail>
+
+      <TypeDetail :images="[
+        '/cents/lincoln-shield-obv.webp',
+        '/cents/lincoln-shield-rev.webp',
+      ]">
+        <template #title>
+          <ProseH3 id="shield">Shield Reverse (2010-date)</ProseH3>
+        </template>
+        <ProseP>
+          The Lincoln cent received a new ongoing reverse design in 2010 featuring a Union Shield, which was widely used
+          during the Civil War era and the Lincoln presidency as a symbol of unity.
+        </ProseP>
+        <UButtonGroup class="-ms-2.5">
+          <TypeSpecifications title="Lincoln, Shield Cent Specifications" :data="{
+            designers: 'Victor D. Brenner (obv), Lyndall Bass (rev)',
+            weight: '2.5 grams',
+            composition: 'copper-plated zinc (core: .992 zinc, .008 copper, with a plating of pure copper; total content .975 zinc, .025 copper)',
+            diameter: '19 mm',
+            edge: 'Plain',
+          }" />
+          <TypeIssues title="Lincoln, Shield Cent Issues" description="Circulation Strikes" :issues="shieldIssues" />
+          <TypeIssues title="Lincoln, Shield Cent Issues" description="Proof Strikes" type="Proofs"
+            :issues="shieldProofs" />
+        </UButtonGroup>
+      </TypeDetail>
+    </article>
   </article>
 </template>
 
 <script setup lang="ts">
-import type { TableColumn } from '@nuxt/ui'
-import type { Coin } from '~~/server/api/cents';
-import formatNumber from '~~/utils/formatNumber';
+import type { Issue } from '~/components/TypeIssues.vue';
 
-const largeCents = ref([
-  { type: 'Flowing Hair', slug: '/federal/cents/flowing-hair', dates: '1793', designers: ['Henry Voigt'], image: '/cents/flowing-hair-obv.webp' },
-  { type: 'Liberty Cap', dates: '1793-1796', designers: ['Henry Voigt'], image: '/cents/liberty-cap-obv.webp' },
-  { type: 'Draped Bust', dates: '1796-1807', designers: ['Robert Scot'], image: '/cents/draped-bust-obv.webp' },
-  { type: 'Classic Head', dates: '1808-1814', designers: ['John Reich'], image: '/cents/classic-head-obv.webp' },
-  { type: 'Liberty Head', dates: '1816-1857', designers: ['Robert Scot', 'John Reich', 'Christian Gobrecht'], image: '/cents/liberty-head-braided-hair.webp' },
+const { data: types } = await useFetch('/api/cents/types')
+
+const chainIssues = ref<Issue[]>([
+  { issue: '1793', mintage: 36103, variants: ['AMERI.', 'AMERICA, Periods', 'AMERICA, No Periods'] },
 ])
 
-const smallCents = ref([
-  { type: 'Flying Eagle', dates: '1856-1858', designers: ['James B. Longacre'], image: '/cents/flying-eagle-obv.webp' },
-  { type: 'Indian Head', dates: '1859-1909', designers: ['James B. Longacre'], image: '/cents/indian-head-obv.webp' },
-  { type: 'Lincoln', slug: '/federal/cents/lincoln', dates: '1909-date', designers: ['Victor D. Brenner', 'Frank Gasparro', 'Lyndall Bass'], image: '/cents/lincoln-wheat-obv.webp', owned: true },
+const wreathIssues = ref<Issue[]>([
+  { issue: '1793', mintage: 63353, variants: ['Vine/Bars Edge', 'Lettered Edge', 'Strawberry Leaf'] }
 ])
 
-const { data, status } = await useFetch('/api/cents')
+const { data: wheatIssues } = await useFetch('/api/cents/lincoln-wheat-issues')
+const { data: wheatProofs } = await useFetch('/api/cents/lincoln-wheat-proofs')
 
-const page = ref(1)
-const pageCount = 10
+const { data: memorialIssues } = await useFetch('/api/cents/lincoln-memorial-issues')
+const { data: memorialProofs } = await useFetch('/api/cents/lincoln-memorial-proofs')
 
-const rows = computed(() => {
-  return data.value?.slice((page.value - 1) * pageCount, (page.value) * pageCount)
-})
+const { data: bicentennialIssues } = await useFetch('/api/cents/lincoln-bicentennial-issues')
+const { data: bicentennialProofs } = await useFetch('/api/cents/lincoln-bicentennial-proofs')
 
-const columns: TableColumn<Coin>[] = [
-  { accessorKey: "issue", header: "Issue" },
-  { accessorKey: "type", header: "Type" },
-  {
-    accessorKey: "mintage",
-    header: "Mintage",
-    cell: ({ row }) => formatNumber(row.getValue("mintage"))
-  },
-  {
-    accessorKey: "designer",
-    header: "designer",
-    meta: { class: { th: 'hidden lg:block', td: 'hidden lg:block' } }
-  }
-]
+const { data: shieldIssues } = await useFetch('/api/cents/lincoln-shield-issues')
+const { data: shieldProofs } = await useFetch('/api/cents/lincoln-shield-proofs')
 </script>

@@ -24,11 +24,11 @@
           </div>
         </div>
         <div class="flex items-center justify-between gap-4 sm:w-3/7">
-          <div class="hidden sm:block">
-            <p v-for="designer in type.designers">
+          <ul class="hidden sm:block">
+            <li v-for="designer in type.designers">
               {{ designer }}
-            </p>
-          </div>
+            </li>
+          </ul>
           <UButton icon="i-lucide-chevron-right" variant="link" />
         </div>
       </li>
@@ -37,13 +37,14 @@
 </template>
 
 <script setup lang="ts">
-interface CoinType {
+export interface CoinType {
   type: string
   image?: string
   slug?: string
   dates: string
   designers: string[]
-  owned?: Boolean
+  owned?: boolean
 }
-const props = defineProps<{ types: CoinType[] }>()
+
+const props = defineProps<{ types?: CoinType[] }>()
 </script>

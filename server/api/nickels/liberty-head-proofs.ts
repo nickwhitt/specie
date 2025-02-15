@@ -1,0 +1,37 @@
+import { Issue } from "~/components/TypeIssues.vue";
+
+export default defineEventHandler(() => {
+  return [
+    { issue: "1883, Without Cents", mintage: 5219 },
+    { issue: "1883, With Cents", mintage: 6783 },
+    { issue: "1884", mintage: 3942 },
+    { issue: "1885", mintage: 3790 },
+    { issue: "1886", mintage: 4290 },
+    { issue: "1887", mintage: 2960 },
+    { issue: "1888", mintage: 4582 },
+    { issue: "1889", mintage: 3336 },
+    { issue: "1890", mintage: 2740 },
+    { issue: "1891", mintage: 2350 },
+    { issue: "1892", mintage: 2745 },
+    { issue: "1893", mintage: 2195 },
+    { issue: "1894", mintage: 2632 },
+    { issue: "1895", mintage: 2062 },
+    { issue: "1896", mintage: 1862 },
+    { issue: "1897", mintage: 1938 },
+    { issue: "1898", mintage: 1795 },
+    { issue: "1899", mintage: 2031 },
+    { issue: "1900", mintage: 2262 },
+    { issue: "1901", mintage: 1985 },
+    { issue: "1902", mintage: 2018 },
+    { issue: "1903", mintage: 1790 },
+    { issue: "1904", mintage: 1817 },
+    { issue: "1905", mintage: 2152 },
+    { issue: "1906", mintage: 1725 },
+    { issue: "1907", mintage: 1475 },
+    { issue: "1908", mintage: 1620 },
+    { issue: "1909", mintage: 4763 },
+    { issue: "1910", mintage: 2405 },
+    { issue: "1911", mintage: 1733 },
+    { issue: "1912", mintage: 2145 },
+  ] as Issue[];
+});

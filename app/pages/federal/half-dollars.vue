@@ -7,7 +7,9 @@
 </template>
 
 <script setup lang="ts">
-const types = ref([
+import type { CoinType } from '~/components/TypeList.vue'
+
+const types = ref<CoinType[]>([
   { type: 'Flowing Hair', dates: '1794-1795', designers: ['Robert Scot'], image: '/half-dollars/flowing-hair-obv.webp' },
   { type: 'Draped Bust', dates: '1796-1807', designers: ['Robert Scot'], image: '/half-dollars/draped-bust-obv.webp' },
   { type: 'Capped Bust', dates: '1807-1839', designers: ['John Reich', 'Christian Gobrecht'], image: '/half-dollars/capped-bust-obv.webp' },

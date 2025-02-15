@@ -1,6 +1,6 @@
 <template>
   <UModal :title="title">
-    <UButton variant="link">Specifications</UButton>
+    <UButton variant="link" class="hover:cursor-pointer">Specifications</UButton>
     <template #body>
       <dl class="divide-y divide-(--ui-border)">
         <div class="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0" v-for="definition, term in data">
@@ -25,7 +25,7 @@ export interface Specifications {
 
 const props = defineProps<{
   title: string,
-  data: Specifications,
+  data?: Specifications,
   notes?: string
 }>()
 </script>
