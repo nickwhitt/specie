@@ -46,7 +46,6 @@ const isDark = computed({
 const items = [
   {
     label: 'Federal Types',
-    to: '/federal',
     defaultOpen: true,
     children: [
       { label: 'Half Cents', to: '/federal/half-cents', description: '1793-1857' },

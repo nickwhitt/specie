@@ -82,6 +82,11 @@
       '/nickels/jefferson-obv.webp',
       '/nickels/jefferson-rev.webp',
     ]">
+      <ProseP>
+        Designed by Felix Schlag, who won a public contest with his pictoral themes of Thomas Jefferson's
+        portrait on the obverse and his Virgina home Monticello on the reverse. With the exception of the
+        silver Wartime nickels of 1942-1945, these coins have been struck in cupronickel.
+      </ProseP>
       <UButtonGroup class="-ms-2.5">
         <TypeSpecifications title="Jefferson Nickel Specifications" :data="{
           designer: 'Felix Schlag',
@@ -104,7 +109,7 @@
       '/nickels/jefferson-2005-obv.webp',
     ]">
       <template #title>
-        <ProseH3 id="westward-journey">Westward Journey</ProseH3>
+        <ProseH3 id="westward-journey">Westward Journey (2004-2005)</ProseH3>
       </template>
       <ProseP>
         Four commemorative issues released over two years for the bicentennial of the Louisiana Purchase and the Lewis
@@ -132,8 +137,12 @@
       '/nickels/jefferson-modified-rev.webp',
     ]">
       <template #title>
-        <ProseH3 id="modified">Modified Obverse</ProseH3>
+        <ProseH3 id="modified">Modified Obverse (2006-date)</ProseH3>
       </template>
+      <ProseP>
+        After the Westward Journey series, the Jefferson nickel returned to the Monticello reverse, but received a new
+        obverse of Jefferson's portrait by Jamie Franki.
+      </ProseP>
       <UButtonGroup class="-ms-2.5">
         <TypeSpecifications title="Jefferson, Modified Specifications" :data="{
           designer: 'Jamie Franki (obv), Felix Schlag (rev)',

@@ -4,8 +4,8 @@
 
     <TypeDetail title="Shield (1864-1873)" slug="shield" :images="[]">
       <ProseP>
-        This single-type denomination was quickly made redundant by the nickel three-cent piece released in 1865,
-        followed by the nickel five-cent piece in 1866.
+        Intended to help small change circulate, this single-type denomination was quickly made redundant
+        by the nickel three-cent piece released in 1865, followed by the nickel five-cent piece in 1866.
       </ProseP>
       <UButtonGroup class="-ms-2.5">
         <TypeSpecifications title="Two-Cent Specifications" :data="{

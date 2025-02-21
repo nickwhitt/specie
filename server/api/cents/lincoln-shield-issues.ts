@@ -2,5 +2,38 @@ import { Issue } from "~/components/TypeIssues.vue";
 
 export default defineEventHandler(() => {
   return [
-  ] as Issue[];
-});
+    { issue: '2010', mintage: 1963630000, owned: true },
+    { issue: '2010-D', mintage: 2047200000 },
+    { issue: '2011', mintage: 2402400000 },
+    { issue: '2011-D', mintage: 2536140000 },
+    { issue: '2012', mintage: 3132000000, owned: true },
+    { issue: '2012-D', mintage: 2883200000 },
+    { issue: '2013', mintage: 3750400000, owned: true },
+    { issue: '2013-D', mintage: 3319600000, owned: true },
+    { issue: '2014', mintage: 3990800000, owned: true },
+    { issue: '2014-D', mintage: 4155600000 },
+    { issue: '2015', mintage: 4691300000, owned: true },
+    { issue: '2015-D', mintage: 4674000000 },
+    { issue: '2016', mintage: 4698000000, owned: true },
+    { issue: '2016-D', mintage: 4420400000, owned: true },
+    { issue: '2017-P', mintage: 4361220000, owned: true },
+    { issue: '2017-D', mintage: 4272800000, owned: true },
+    { issue: '2018', mintage: 4066800000, owned: true },
+    { issue: '2018-D', mintage: 3736400000 },
+    { issue: '2019', mintage: 3542800000, owned: true },
+    { issue: '2019-D', mintage: 3497600000, owned: true },
+    { issue: '2019-W', mintage: 346117, estimate: true },
+    { issue: '2020', mintage: 3925820000, owned: true },
+    { issue: '2020-D', mintage: 3982800000, owned: true },
+    { issue: '2021', mintage: 3560800000, estimate: true, owned: true },
+    { issue: '2021-D', mintage: 4035600000, estimate: true, owned: true },
+    { issue: '2022', owned: true },
+    { issue: '2022-D' },
+    { issue: '2023', owned: true },
+    { issue: '2023-D' },
+    { issue: '2024' },
+    { issue: '2024-D' },
+    { issue: '2025' },
+    { issue: '2025-D' },
+  ] as Issue[]
+})
