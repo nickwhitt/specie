@@ -1,13 +1,26 @@
 <template>
   <article>
     <ProseH1>Cents</ProseH1>
+    <TypeList :types="types" />
     <ProseP>
       The first circulation coin to be struck by the United States Mint, the cent has been in
-      continual production since its authorization by the Coinage Act of 1792.
+      continual production since its authorization by the Coinage Act of 1792. Originally specified
+      to a weight of 264 grains (17.11 grams) of pure copper, this was changed to 208 grains (13.48
+      grams) by the Act of January 14, 1793 (prior to any coinage actually being struck) in response
+      to rising copper prices. At this standard weight, copper specie was produced at approximately
+      34 cent pieces per avoirdupois pound. Within 3 years, however, primarily due to the French
+      Revolution, a proclomation by President Washington was necessary to reduce the standard to
+      168 grains (10.89 grams); allowing coinage of aproximately 42 cent pieces per avoirdupois
+      pound.
     </ProseP>
-
-    <TypeList :types="types" />
-
+    <ProseP>
+      The early Mint had a rather important need for economical production of copper coinage.
+      Unlike silver and gold specie, copper bullion was not permitted for free coinage by
+      depositors. Instead, the Mint itself sourced copper from a bullion fund established by the
+      Treasury. The difference in net cost between coinage and the face value of the coins produced
+      was profit of the Mint&mdash;if production cost for 50,000 copper cents was $450, a profit of $50
+      was received by the Mint.
+    </ProseP>
     <article>
       <ProseH2 id="flowing-hair">Flowing Hair (1793)</ProseH2>
 
@@ -61,7 +74,6 @@
         </UButtonGroup>
       </TypeDetail>
     </article>
-
     <article>
       <ProseH2 id="liberty-head">Liberty Head Cents (1816-1857)</ProseH2>
       <TypeDetail :images="[
@@ -71,6 +83,27 @@
         <template #title>
           <ProseH3 id="matron-head">Matron or Coronet Head (1816-1839)</ProseH3>
         </template>
+        <ProseP>
+          After the War of 1812, the Mint introduced an updated obverse design of Liberty
+          with a coronet replacing the previous fillet-style headband. Chief Engraver Robert
+          Scot's design, while commonly referred to as the Coronet Head, was derided for
+          Liberty's "matronly" appearance. Late series issues consist of multiple obverse
+          varieties, as engraver Christian Gobrecht experimented with various "Young Head"
+          designs.
+        </ProseP>
+        <UButtonGroup class="-ms-2.5">
+          <TypeSpecifications title="Liberty Head, Matron Head Specifications" :data="{
+            designer: 'Robert Scot // 1835-1839: Christian Gobrecht',
+            weight: '10.89 grams',
+            composition: 'pure copper',
+            diameter: '28 to 29 mm // 1835-1839: 27.5 mm',
+            edge: 'Plain',
+          }" />
+          <TypeIssues title="Liberty Head, Matron Head Issues" description="Circulation Strikes"
+            :issues="matronHeadIssues" />
+          <TypeIssues title="Liberty Head, Matron Head Issues" type="Proofs" description="Proof Strikes"
+            :issues="matronHeadProofs" />
+        </UButtonGroup>
       </TypeDetail>
       <TypeDetail :images="[
         '/cents/liberty-head-braided-hair-obv.webp',
@@ -78,20 +111,27 @@
       ]">
         <template #title>
           <ProseH3 id="braided-hair">Braided Hair (1839-1857)</ProseH3>
-          <UButtonGroup class="-ms-2.5">
-            <TypeSpecifications title="Braided Hair Specifications" :data="{
-              designer: 'Christian Gobrecht',
-              weight: '10.89 grams',
-              composition: 'pure copper',
-              diameter: '27.5 mm',
-              edge: 'Plain',
-            }" />
-            <TypeIssues title="Braided Hair Cent Issues" description="Circulation Strikes"
-              :issues="braidedHairIssues" />
-            <TypeIssues title="Braided Hair Cent Issues" type="Proofs" description="Proof Strikes"
-              :issues="braidedHairProofs" />
-          </UButtonGroup>
         </template>
+        <ProseP>
+          With the advent of steam powered production in 1836, the Coronet Head design was
+          deemed necessary to update for mass coinage. Based on a similar design to that of
+          the half eagle, Christian Gobrecht's Braided Hair design was produced in vast
+          quantites and varieties; including the "overdate" date-punch errors of 1844 and
+          1851 which each have the date punched upside down.
+        </ProseP>
+        <UButtonGroup class="-ms-2.5">
+          <TypeSpecifications title="Liberty Head, Braided Hair Specifications" :data="{
+            designer: 'Christian Gobrecht',
+            weight: '10.89 grams',
+            composition: 'pure copper',
+            diameter: '27.5 mm',
+            edge: 'Plain',
+          }" />
+          <TypeIssues title="Liberty Head, Braided Hair Issues" description="Circulation Strikes"
+            :issues="braidedHairIssues" />
+          <TypeIssues title="Liberty Head, Braided Hair Issues" type="Proofs" description="Proof Strikes"
+            :issues="braidedHairProofs" />
+        </UButtonGroup>
       </TypeDetail>
     </article>
 
@@ -221,10 +261,11 @@ const wreathIssues = ref<Issue[]>([
   { issue: '1793', mintage: 63353, variants: ['Vine/Bars Edge', 'Lettered Edge', 'Strawberry Leaf'] }
 ])
 
-const braidedHairIssues = [
-  { issue: '1853', mintage: 6641131, owned: 'EF' }
-]
-const braidedHairProofs = []
+const { data: matronHeadIssues } = await useFetch('/api/cents/matron-head-issues')
+const { data: matronHeadProofs } = await useFetch('/api/cents/matron-head-proofs')
+
+const { data: braidedHairIssues } = await useFetch('/api/cents/braided-hair-issues')
+const { data: braidedHairProofs } = await useFetch('/api/cents/braided-hair-proofs')
 
 const { data: wheatIssues } = await useFetch('/api/cents/lincoln-wheat-issues')
 const { data: wheatProofs } = await useFetch('/api/cents/lincoln-wheat-proofs')
