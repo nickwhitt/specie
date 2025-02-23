@@ -63,6 +63,39 @@
     </article>
 
     <article>
+      <ProseH2 id="liberty-head">Liberty Head Cents (1816-1857)</ProseH2>
+      <TypeDetail :images="[
+        '/cents/liberty-head-coronet-head-obv.webp',
+        '/cents/liberty-head-coronet-head-rev.webp',
+      ]">
+        <template #title>
+          <ProseH3 id="matron-head">Matron or Coronet Head (1816-1839)</ProseH3>
+        </template>
+      </TypeDetail>
+      <TypeDetail :images="[
+        '/cents/liberty-head-braided-hair-obv.webp',
+        '/cents/liberty-head-braided-hair-rev.webp',
+      ]">
+        <template #title>
+          <ProseH3 id="braided-hair">Braided Hair (1839-1857)</ProseH3>
+          <UButtonGroup class="-ms-2.5">
+            <TypeSpecifications title="Braided Hair Specifications" :data="{
+              designer: 'Christian Gobrecht',
+              weight: '10.89 grams',
+              composition: 'pure copper',
+              diameter: '27.5 mm',
+              edge: 'Plain',
+            }" />
+            <TypeIssues title="Braided Hair Cent Issues" description="Circulation Strikes"
+              :issues="braidedHairIssues" />
+            <TypeIssues title="Braided Hair Cent Issues" type="Proofs" description="Proof Strikes"
+              :issues="braidedHairProofs" />
+          </UButtonGroup>
+        </template>
+      </TypeDetail>
+    </article>
+
+    <article>
       <ProseH2 id="lincoln">Lincoln Cents (1909-date)</ProseH2>
 
       <TypeDetail :images="[
@@ -187,6 +220,11 @@ const chainIssues = ref<Issue[]>([
 const wreathIssues = ref<Issue[]>([
   { issue: '1793', mintage: 63353, variants: ['Vine/Bars Edge', 'Lettered Edge', 'Strawberry Leaf'] }
 ])
+
+const braidedHairIssues = [
+  { issue: '1853', mintage: 6641131, owned: 'EF' }
+]
+const braidedHairProofs = []
 
 const { data: wheatIssues } = await useFetch('/api/cents/lincoln-wheat-issues')
 const { data: wheatProofs } = await useFetch('/api/cents/lincoln-wheat-proofs')

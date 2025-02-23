@@ -29,9 +29,10 @@ export default defineEventHandler(() => {
     },
     {
       type: "Liberty Head",
+      slug: "#liberty-head",
       dates: "1816-1857",
       designers: ["Robert Scot", "John Reich", "Christian Gobrecht"],
-      image: "/cents/liberty-head-braided-hair.webp",
+      image: "/cents/liberty-head-braided-hair-obv.webp",
       owned: true,
     },
     {
