@@ -2,7 +2,7 @@ import { Issue } from "~/components/TypeIssues.vue";
 
 export default defineEventHandler(() => {
   return [
-    { issue: "1913, Raised", mintage: 30992000, variants:['3-1/2 Legged'] },
+    { issue: "1913, Raised", mintage: 30992000, variants:['3-1/2 Legged'], owned: 'AU' },
     { issue: "1913-D, Raised", mintage: 5337000 },
     { issue: "1913-S, Raised", mintage: 2105000 },
     { issue: "1913, Recessed", mintage: 29857186 },

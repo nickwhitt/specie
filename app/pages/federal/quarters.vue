@@ -54,7 +54,7 @@ const types: CoinType[] = [
   { type: 'Draped Bust', dates: '1796-1807', designers: ['Gilbert Stuart', 'Robert Scot'], image: '/quarters/draped-bust-obv.webp' },
   { type: 'Capped Bust', dates: '1815-1838', designers: ['John Reich', 'William Kneass'], image: '/quarters/capped-bust-obv.webp' },
   { type: 'Liberty Seated', dates: '1838-1891', designers: ['Christian Gobrecht'], image: '/quarters/liberty-seated-obv.webp' },
-  { type: 'Barber', dates: '1892-1916', designers: ['Charles E. Barber'], image: '/quarters/barber-obv.webp' },
+  { type: 'Barber', dates: '1892-1916', designers: ['Charles E. Barber'], image: '/quarters/barber-obv.webp', owned: true },
   { type: 'Standing Liberty', dates: '1916-1930', designers: ['Hermon A. MacNeil'], image: '/quarters/standing-liberty-obv.webp', owned: true },
   { type: 'Washington', slug: '#washington', dates: '1930-date', designers: ['John Flanagan', 'William Cousins', 'Laura Gardin Fraser'], image: '/quarters/washington-obv.webp', owned: true },
 ]

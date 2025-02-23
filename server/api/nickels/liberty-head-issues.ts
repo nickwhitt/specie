@@ -2,7 +2,7 @@ import { Issue } from "~/components/TypeIssues.vue";
 
 export default defineEventHandler(() => {
   return [
-    { issue: "1883, No Cents", mintage: 5474300 },
+    { issue: "1883, No Cents", mintage: 5474300, owned: 'AU' },
     { issue: "1883, Cents", mintage: 16026200 },
     { issue: "1884", mintage: 11270000 },
     { issue: "1885", mintage: 1472700 },

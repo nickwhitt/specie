@@ -32,6 +32,7 @@ export default defineEventHandler(() => {
       dates: "1816-1857",
       designers: ["Robert Scot", "John Reich", "Christian Gobrecht"],
       image: "/cents/liberty-head-braided-hair.webp",
+      owned: true,
     },
     {
       type: "Flying Eagle",
@@ -44,6 +45,7 @@ export default defineEventHandler(() => {
       dates: "1859-1909",
       designers: ["James B. Longacre"],
       image: "/cents/indian-head-obv.webp",
+      owned: true,
     },
     {
       type: "Lincoln",

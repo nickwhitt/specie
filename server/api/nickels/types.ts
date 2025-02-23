@@ -16,6 +16,7 @@ export default defineEventHandler(() => {
       dates: "1883-1913",
       designers: ["Charles E. Barber"],
       image: "/nickels/liberty-head-obv.webp",
+      owned: true,
     },
     {
       type: "Buffalo",
@@ -23,6 +24,7 @@ export default defineEventHandler(() => {
       dates: "1913-1938",
       designers: ["James Earle Fraser"],
       image: "/nickels/buffalo-rev.webp",
+      owned: true,
     },
     {
       type: "Jefferson",
