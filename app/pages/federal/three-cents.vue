@@ -10,7 +10,7 @@
 import type { CoinType } from '~/components/TypeList.vue';
 
 const types: CoinType[] = [
-  { type: 'Silver Three Cent Piece', dates: '1851-1873', designers: ['James B. Longacre'] },
-  { type: 'Nickel Three Cent Piece', dates: '1865-1889', designers: ['James B. Longacre'] },
+  { type: 'Silver Three Cent Piece', dates: '1851-1873', designers: ['James B. Longacre'], image: '/three-cents/silver-obv.webp' },
+  { type: 'Nickel Three Cent Piece', dates: '1865-1889', designers: ['James B. Longacre'], image: '/three-cents/nickel-rev.webp' },
 ]
 </script>

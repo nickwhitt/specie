@@ -3,12 +3,17 @@
     <slot name="title">
       <ProseH2 :id="slug">{{ title }}</ProseH2>
     </slot>
-    <div class="grid md:grid-cols-2">
-      <div class="flex flex-wrap gap-2 justify-center md:order-last md:mt-5">
-        <NuxtPicture v-for="source in images" :src="source" sizes="120px lg:200px" />
+    <div class="grid md:grid-cols-3 justify-center">
+      <div class="flex flex-wrap gap-2 justify-center md:hidden">
+        <NuxtPicture v-for="source in images" :src="source" sizes="120px" />
       </div>
-      <div>
+      <div class="md:col-span-2">
         <slot />
+      </div>
+      <div class="hidden md:block">
+        <UCarousel v-slot="{ item }" :items="images" dots>
+          <NuxtImg :src="item" sizes="200px lg:300px" class="mx-auto" />
+        </UCarousel>
       </div>
     </div>
   </div>

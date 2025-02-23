@@ -2,7 +2,10 @@
   <article>
     <ProseH1>Two-Cent Pieces</ProseH1>
 
-    <TypeDetail title="Shield (1864-1873)" slug="shield" :images="[]">
+    <TypeDetail title="Shield (1864-1873)" slug="shield" :images="[
+      '/two-cents/shield-obv.webp',
+      '/two-cents/shield-rev.webp',
+    ]">
       <ProseP>
         Intended to help small change circulate, this single-type denomination was quickly made redundant
         by the nickel three-cent piece released in 1865, followed by the nickel five-cent piece in 1866.

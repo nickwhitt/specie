@@ -91,7 +91,10 @@
         </UButtonGroup>
       </TypeDetail>
 
-      <TypeDetail :images="[]">
+      <TypeDetail :images="[
+        '/cents/lincoln-memorial-obv.webp',
+        '/cents/lincoln-memorial-rev.webp',
+      ]">
         <template #title>
           <ProseH3 id="memorial">Memorial Reverse (1959-2008)</ProseH3>
         </template>
