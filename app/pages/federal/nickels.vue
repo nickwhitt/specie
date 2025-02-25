@@ -8,7 +8,7 @@
 
     <TypeList :types="types" />
 
-    <TypeDetail title="Shield (1866-1883)" slug="shield" :images="[
+    <TypeDetail title="Shield Nickel" slug="shield" :images="[
       '/nickels/shield-obv.webp',
       '/nickels/shield-rev.webp',
       '/nickels/shield-rays-rev.webp',
@@ -32,7 +32,7 @@
       </UButtonGroup>
     </TypeDetail>
 
-    <TypeDetail title="Liberty Head (1883-1913)" slug="liberty-head" :images="[
+    <TypeDetail title="Liberty Head Nickel" slug="liberty-head" :images="[
       '/nickels/liberty-head-obv.webp',
       '/nickels/liberty-head-rev.webp',
       '/nickels/liberty-head-no-cents-rev.webp',
@@ -56,7 +56,7 @@
       </UButtonGroup>
     </TypeDetail>
 
-    <TypeDetail title="Indian Head or Buffalo (1913-1938)" slug="buffalo" :images="[
+    <TypeDetail title="Indian Head or Buffalo Nickel" slug="buffalo" :images="[
       '/nickels/buffalo-obv.webp',
       '/nickels/buffalo-rev.webp',
       '/nickels/buffalo-raised-ground-rev.webp',
@@ -78,7 +78,7 @@
       </UButtonGroup>
     </TypeDetail>
 
-    <TypeDetail title="Jefferson (1938-date)" slug="jefferson" :images="[
+    <TypeDetail title="Jefferson Nickel" slug="jefferson" :images="[
       '/nickels/jefferson-obv.webp',
       '/nickels/jefferson-rev.webp',
     ]">
@@ -109,7 +109,7 @@
       '/nickels/jefferson-2005-obv.webp',
     ]">
       <template #title>
-        <ProseH3 id="westward-journey">Westward Journey (2004-2005)</ProseH3>
+        <ProseH3 id="westward-journey">Westward Journey</ProseH3>
       </template>
       <ProseP>
         Four commemorative issues released over two years for the bicentennial of the Louisiana Purchase and the Lewis
@@ -137,7 +137,7 @@
       '/nickels/jefferson-modified-rev.webp',
     ]">
       <template #title>
-        <ProseH3 id="modified">Modified Obverse (2006-date)</ProseH3>
+        <ProseH3 id="modified">Modified Obverse</ProseH3>
       </template>
       <ProseP>
         After the Westward Journey series, the Jefferson nickel returned to the Monticello reverse, but received a new

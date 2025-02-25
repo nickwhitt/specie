@@ -2,7 +2,7 @@
   <article>
     <ProseH1>Two-Cent Pieces</ProseH1>
 
-    <TypeDetail title="Shield (1864-1873)" slug="shield" :images="[
+    <TypeDetail title="Shield Two-Cent Piece" slug="shield" :images="[
       '/two-cents/shield-obv.webp',
       '/two-cents/shield-rev.webp',
     ]">

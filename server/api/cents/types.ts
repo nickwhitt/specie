@@ -11,18 +11,21 @@ export default defineEventHandler(() => {
     },
     {
       type: "Liberty Cap",
+      slug: '#liberty-cap',
       dates: "1793-1796",
       designers: ["Henry Voigt"],
       image: "/cents/liberty-cap-obv.webp",
     },
     {
       type: "Draped Bust",
+      slug: '#draped-bust',
       dates: "1796-1807",
       designers: ["Robert Scot"],
       image: "/cents/draped-bust-obv.webp",
     },
     {
       type: "Classic Head",
+      slug: '#classic-head',
       dates: "1808-1814",
       designers: ["John Reich"],
       image: "/cents/classic-head-obv.webp",
@@ -37,12 +40,14 @@ export default defineEventHandler(() => {
     },
     {
       type: "Flying Eagle",
+      slug: '#flying-eagle',
       dates: "1856-1858",
       designers: ["James B. Longacre"],
       image: "/cents/flying-eagle-obv.webp",
     },
     {
       type: "Indian Head",
+      slug: '#indian-head',
       dates: "1859-1909",
       designers: ["James B. Longacre"],
       image: "/cents/indian-head-obv.webp",
